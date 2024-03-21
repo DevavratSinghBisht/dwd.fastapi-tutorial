@@ -20,7 +20,7 @@ async def read_item(param1: int = 0, param2: int = 10):
 
 
 #Optonal query param
-@app.get("/optional/{item_id}")
+@app.get("/optional")
 async def read_item(mandatory: str, optional: str | None = None):
     if optional:
         return {"mandatory": mandatory, "optional": optional}
